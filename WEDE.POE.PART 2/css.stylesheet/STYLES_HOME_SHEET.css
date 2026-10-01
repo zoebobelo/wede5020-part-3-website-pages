@@ -28,11 +28,29 @@
     
 }
 
+nav{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    color: white;
+}
+
 #welcome{
     font-family: Roman;
     color: white;
     margin: 0;
-    font-size: 36px;
+    font-size: 40px;
 }
  
 
@@ -50,6 +68,7 @@ html, body {
   padding: 0 !important;
   width: 100%;
   overflow-x: hidden;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .hero {
