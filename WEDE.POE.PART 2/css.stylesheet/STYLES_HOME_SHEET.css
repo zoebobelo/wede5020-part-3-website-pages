@@ -1,0 +1,95 @@
+.header{
+    background-color: black;
+    color: white;
+}
+
+.top-section{
+    background-color: black;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+#Title{
+    font-family: Roman;
+    color: white;
+    margin: 0;
+    font-size: 38px;
+}
+
+#HeaderLine{
+    border: 1px solid #b8870bcc;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    
+}
+
+#welcome{
+    font-family: Roman;
+    color: white;
+    margin: 0;
+    font-size: 36px;
+}
+ 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('../hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+#footerLine{
+    border: 1px solid #b8870bcc;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    
+}
+
+.bottom-section{
+    background-color: black;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
