@@ -28,27 +28,11 @@
     
 }
 
-nav{
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
-}
 
-nav ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: left;
-    color: white;
-}
 
 #welcome{
     font-family: Roman;
-    color: white;
+    color: #D4AF37;
     margin: 0;
     font-size: 40px;
 }
