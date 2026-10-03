@@ -24,6 +24,22 @@
     font-size: 38px;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 15px 40px;
+  background: #111122;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+nav a:hover, nav a.active {
+  color: #c9a86a;
+}
 
 #HeaderLine{
     border: 1px solid #b8870bcc;
@@ -89,15 +105,14 @@ body{
 }
 
 .bottom-section{
-    background-color: black;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
+    background: #0a0a14;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 footer{
-    background-color: black;
+    background: #0a0a14;
     color: white;
     padding: 10px 20px;
     width: 100%;

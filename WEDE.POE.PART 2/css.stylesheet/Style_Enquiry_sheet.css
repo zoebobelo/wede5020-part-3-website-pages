@@ -1,0 +1,105 @@
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #f5f3ef;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* HEADER */
+.top-section {
+  background: #0a0a14;
+  color: white;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 40px;
+}
+#Title {
+  letter-spacing: 3px;
+  font-size: 32px;
+  margin: 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 15px 40px;
+  background: #111122;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+nav a:hover, nav a.active {
+  color: #c9a86a;
+}
+
+#HeaderLine, #footerLine {
+  border: 1px solid #c9a86a;
+  margin: 0;
+}
+
+/* FORM SECTION */
+.enquiry-container {
+  max-width: 750px;
+  margin: 30px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.enquiry-container h1 {
+  margin-top: 0;
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+table {
+  width: 100%;
+}
+td {
+  padding: 8px;
+  vertical-align: top;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+input:focus, textarea:focus {
+  border-color: #c9a86a;
+  outline: none;
+}
+.buttons button {
+  width: auto;
+  padding: 10px 20px;
+  background: #0a0a14;
+  color: white;
+  border: 1px solid #c9a86a;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.buttons button:hover {
+  background: #c9a86a;
+  color: #0a0a14;
+}
+
+/* FOOTER */
+.bottom-section {
+  background: #0a0a14;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.footer a {
+  color: #c9a86a;
+}
