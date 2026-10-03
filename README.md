@@ -3,6 +3,7 @@
 **GitHub Repository:** https://github.com/EMGPSD/wede5020-2026-wede5020-part-1-zoebobelo 
 
 ## Student Information
+-**Zoe Agape Midzpa Bobelo
 - **Student Number:** ST10530562
 - **Email:** st10530562@myemeris.edu.za
 - **Module:** WEDE5020 - Web Development
