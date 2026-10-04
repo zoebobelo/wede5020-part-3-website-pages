@@ -1,3 +1,5 @@
+img { max-width: 100%; height: auto; }
+
 html, body {
   margin: 0 !important;
   padding: 0 !important;
@@ -102,4 +104,84 @@ input:focus, textarea:focus {
 }
 .footer a {
   color: #c9a86a;
+}
+
+/* --- TABLET LAYOUT: 1024px and below --- */
+@media (max-width: 1024px) {
+  .header {
+    padding: 15px 20px;
+  }
+  #Title {
+    font-size: 1.75rem;
+  }
+  .enquiry-container {
+    max-width: 90%;
+    padding: 25px 30px;
+  }
+}
+
+/* --- TABLET PORTRAIT: 768px and below --- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 12px 20px;
+    justify-content: center;
+  }
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .enquiry-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  table, tr, td {
+    display: block;
+    width: 100%;
+  }
+  td:first-child {
+    padding-bottom: 0;
+    font-weight: bold;
+  }
+  td:last-child {
+    padding-top: 5px;
+  }
+}
+
+/* --- MOBILE LAYOUT: 480px and below --- */
+@media (max-width: 480px) {
+  #Title {
+    font-size: 1.375rem;
+    letter-spacing: 2px;
+  }
+  .header img {
+    width: 70px;
+    height: 70px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .enquiry-container h1 {
+    font-size: 1.6rem;
+  }
+  input, textarea {
+    font-size: 1rem;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .buttons button {
+    width: 100%;
+    margin-right: 0;
+  }
+  .footer {
+    font-size: 0.8125rem;
+    padding: 15px;
+  }
 }
