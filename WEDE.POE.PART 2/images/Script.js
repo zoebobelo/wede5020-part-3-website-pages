@@ -1,24 +1,24 @@
 const menuBtn = document.getElementById('menuBtn');
 const mainNav = document.getElementById('mainNav');
-
+// Function to close the menu
 if (menuBtn && mainNav) {
   const closeMenu = () => {
     mainNav.classList.remove('show');
     menuBtn.setAttribute('aria-expanded', 'false');
   };
-
+// Toggle the menu when clicking the menu button
   menuBtn.addEventListener('click', () => {
     const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
     menuBtn.setAttribute('aria-expanded', String(!isExpanded));
     mainNav.classList.toggle('show', !isExpanded);
   });
-
+// Close the menu when clicking on a navigation link
   mainNav.addEventListener('click', event => {
     if (event.target instanceof Element && event.target.closest('a')) {
       closeMenu();
     }
   });
-
+// Close the menu when pressing the Escape key
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
       closeMenu();
@@ -26,6 +26,7 @@ if (menuBtn && mainNav) {
     }
   });
 
+  // Close the menu when resizing the window to a width greater than 768px
   window.addEventListener('resize', () => {
     if (window.matchMedia('(min-width: 769px)').matches) {
       closeMenu();
@@ -33,6 +34,7 @@ if (menuBtn && mainNav) {
   });
 }
 
+// Fade-in effect for elements
 const fadeElements = document.querySelectorAll('.fade-in');
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
@@ -43,12 +45,14 @@ if ('IntersectionObserver' in window) {
       }
     });
   });
-
+// Observe each fade-in element
   fadeElements.forEach(element => observer.observe(element));
 } else {
   fadeElements.forEach(element => element.classList.add('visible'));
 }
 
+
+// Enquiry form submission handling
 const enquiryForm = document.querySelector('.enquiry-container form');
 if (enquiryForm) {
   enquiryForm.addEventListener('submit', event => {

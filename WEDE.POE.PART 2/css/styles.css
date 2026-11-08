@@ -7,7 +7,7 @@
 html {
   font-family: "Times New Roman", Times, serif;
   color: #222;
-  background: #f5f5f5;
+  background: #f5e8e8;
 }
 
 body {
@@ -21,7 +21,7 @@ img {
 }
 
 .top-section {
-  background: #0a0a14;
+  background: #111111;
   color: #fff;
 }
 
@@ -281,11 +281,86 @@ main > article {
 }
 
 .contact-container {
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 0 20px;
-  line-height: 1.6;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px 76px;
+  line-height: 1.65;
+}
+
+.contact-intro {
+  max-width: 650px;
+  margin: 0 auto 38px;
   text-align: center;
+}
+
+.contact-eyebrow {
+  margin-bottom: 8px;
+  color: #9a773c;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.contact-intro h1 {
+  margin-bottom: 12px;
+  color: #0a0a14;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+/* Contact Intro Paragraph Styles */
+.contact-intro > p:last-child {
+  color: #626262;
+  font-size: 1.1rem;
+}
+
+/* Contact Grid Styles */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+/* Contact Card Styles */
+.contact-card {
+  min-width: 0;
+  padding: 25px 28px;
+  border-top: 3px solid #c9a86a;
+  border-radius: 6px;
+  background: #1a1919;
+  box-shadow: 0 8px 22px rgba(10, 10, 20, 0.08);
+}
+
+.contact-card h2 {
+  margin-bottom: 14px;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+/* Contact Card Paragraph Styles */
+.contact-card p {
+  margin: 9px 0;
+  color: #e4e1dc;
+  overflow-wrap: anywhere;
+}
+
+.contact-card p strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #c9a86a;
+  font-size: 0.78rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.contact-card a {
+  color: #d7b875;
+  font-weight: bold;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.contact-card a:hover,
+.contact-card a:focus-visible {
+  color: #fff;
 }
 
 .enquiry-container h1 {
@@ -336,13 +411,13 @@ main > article {
 
 .buttons button:hover,
 .buttons button:focus {
-  background: #c9a86a;
+  background: zz#c9a86a;
   color: #0a0a14;
 }
 
 .bottom-section {
   padding: 20px;
-  background: #0a0a14;
+  background: #111111;
   color: #fff;
   text-align: center;
 }
@@ -408,6 +483,14 @@ footer p {
   .enquiry-container {
     max-width: 95%;
     padding: 20px;
+  }
+
+  .contact-container {
+    padding: 48px 20px 56px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
   .enquiry-container table,
@@ -496,6 +579,18 @@ footer p {
   .enquiry-container {
     margin: 20px auto;
     padding: 20px 15px;
+  }
+
+  .contact-container {
+    padding: 38px 16px 46px;
+  }
+
+  .contact-intro {
+    margin-bottom: 28px;
+  }
+
+  .contact-card {
+    padding: 22px;
   }
 
   .enquiry-container h1 {
