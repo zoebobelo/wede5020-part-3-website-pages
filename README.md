@@ -3,7 +3,6 @@
 **GitHub Repository:** https://github.com/EMGPSD/wede5020-2026-wede5020-part-1-zoebobelo 
 
 ## Student Information
--**Zoe Agape Midzpa Bobelo
 - **Student Number:** ST10530562
 - **Email:** st10530562@myemeris.edu.za
 - **Module:** WEDE5020 - Web Development
@@ -21,18 +20,19 @@ LEXHAPHOTOGRAPHY is a real, operating small business owned by Liliso Ntloko, bas
 **KPIs:** Enquiry submissions 10/month, time on Gallery >2 mins, Instagram clicks, bounce rate <60%
 
 ## Key Features - Actual Implementation
-- **01-home-page.html (Home):** Welcome to Lexhaphotography, business intro, [Book Your Session Today]
+- **index.html (Home):** Welcome to Lexhaphotography, business intro, [Book Your Session Today]
 - **02-about-us-page.html (About Us):** The Owner Liliso Ntloko photo + bio, Our Story from phone to professional
 - **03-image-gallery.html (Gallery):** 3-column layout with vertical dividers, Nature photos, Matric Dance Photos, Model shoots, display: grid + object-fit: cover
 - **05-enquiry-page.html (Enquires):** Full Name, Email, Phone e.g 0723142309, Message, Preferred Date yyyy/mm/dd, Preferred Location, Submit/Clear Form
 - **04-Contact-page.html (Contact Us):** Business info, Owner, Location Queenstown Komani, View Pin View on Map, Phone/WhatsApp 072 390 8908, Email Lexhaphotography@gmail.com, Instagram @lexhaphotography, Hours Mon-Sat 09:00-17:00 Sunday Closed
+- **Shared styling:** All pages use `css/styles.css`, including responsive layouts for mobile and tablet screens.
 
 **Consistent Elements:** Circular gold logo + LEXHAPHOTOGRAPHY header, Nav: Home | About us | Image Gallery | Enquiry | Contact us, Footer: © Lexhaphotography All rights reserved + email link st10530562@myemeris.edu.za
 
 ## Sitemap
 LEXHAPHOTOGRAPHY
 |
-|-- 01-home-page.html (Home)
+|-- index.html (Home)
 |   |-- Hero section - charcoal #2B2B2B header with gold #D4AF37 border + logo
 |   |-- Intro / Welcome text
 |   |-- Featured portfolio preview (MD, Nature, Model)
@@ -76,7 +76,9 @@ LEXHAPHOTOGRAPHY
 - 2026-09-01: Built 5 pages as per screenshots, pushed to https://github.com/EMGPSD/wede5020-2026-wede5020-part-1-zoebobelo
 
 ## How to Run
-Clone repo and open 01-home-page.html in browser
+Clone repo and open index.html in browser
+
+The site-wide stylesheet is located at `css/styles.css`.
 
 ## References
 Instagram. (2026). LEXHAPHOTOGRAPHY (@lexhaphotography) • Instagram photos and videos. Available at: https://www.instagram.com/lexhaphotography/   [Accessed 6 August 2026].
@@ -89,7 +91,5 @@ Supriya Shashivasan. (2021, March 23). How to build a Curved UI header. DEV Comm
 
 
 Warncke, S. (2020). Erik Forster Photography - For all your photographic needs. Available at: https://peach.co.za/  [Accessed 20 August 2026].
-
-
 
 
