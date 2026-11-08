@@ -90,4 +90,78 @@ if (enquiryForm) {
   });
 }
 
+const galleryImages = Array.from(document.querySelectorAll('.gallery-photos img'));
+if (galleryImages.length && typeof HTMLDialogElement !== 'undefined') {
+  const lightbox = document.createElement('dialog');
+  lightbox.className = 'gallery-lightbox';
+  lightbox.setAttribute('aria-label', 'Image viewer');
+
+  const closeButton = document.createElement('button');
+  closeButton.className = 'gallery-lightbox-close';
+  closeButton.type = 'button';
+  closeButton.setAttribute('aria-label', 'Close image viewer');
+  closeButton.textContent = '×';
+
+  const previousButton = document.createElement('button');
+  previousButton.className = 'gallery-lightbox-previous';
+  previousButton.type = 'button';
+  previousButton.setAttribute('aria-label', 'Previous image');
+  previousButton.textContent = '‹';
+
+  const nextButton = document.createElement('button');
+  nextButton.className = 'gallery-lightbox-next';
+  nextButton.type = 'button';
+  nextButton.setAttribute('aria-label', 'Next image');
+  nextButton.textContent = '›';
+
+  const lightboxImage = document.createElement('img');
+  lightboxImage.className = 'gallery-lightbox-image';
+
+  const caption = document.createElement('p');
+  caption.className = 'gallery-lightbox-caption';
+  caption.setAttribute('aria-live', 'polite');
+
+  lightbox.append(closeButton, previousButton, lightboxImage, caption, nextButton);
+  document.body.append(lightbox);
+
+  let activeImageIndex = 0;
+  const showImage = index => {
+    activeImageIndex = (index + galleryImages.length) % galleryImages.length;
+    const image = galleryImages[activeImageIndex];
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt;
+    caption.textContent = image.closest('figure')?.querySelector('figcaption')?.textContent.trim() || image.alt;
+  };
+
+  galleryImages.forEach((image, index) => {
+    const trigger = document.createElement('button');
+    trigger.className = 'gallery-image-button';
+    trigger.type = 'button';
+    trigger.setAttribute('aria-label', `View image: ${image.alt}`);
+    image.before(trigger);
+    trigger.append(image);
+    trigger.addEventListener('click', () => {
+      showImage(index);
+      lightbox.showModal();
+      closeButton.focus();
+    });
+  });
+
+  closeButton.addEventListener('click', () => lightbox.close());
+  previousButton.addEventListener('click', () => showImage(activeImageIndex - 1));
+  nextButton.addEventListener('click', () => showImage(activeImageIndex + 1));
+  lightbox.addEventListener('click', event => {
+    if (event.target === lightbox) {
+      lightbox.close();
+    }
+  });
+  lightbox.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') {
+      showImage(activeImageIndex - 1);
+    } else if (event.key === 'ArrowRight') {
+      showImage(activeImageIndex + 1);
+    }
+  });
+}
+
 document.documentElement.classList.add('js');
