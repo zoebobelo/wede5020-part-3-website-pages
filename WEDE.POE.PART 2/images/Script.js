@@ -55,6 +55,28 @@ if ('IntersectionObserver' in window) {
 // Enquiry form submission handling
 const enquiryForm = document.querySelector('.enquiry-container form');
 if (enquiryForm) {
+  const preferredDate = enquiryForm.querySelector('#preferredDate');
+  if (preferredDate) {
+    const today = new Date();
+    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+      .toISOString()
+      .slice(0, 10);
+    preferredDate.min = localToday;
+  }
+
+  const messageField = enquiryForm.querySelector('#message');
+  const messageCount = enquiryForm.querySelector('#message-count');
+  if (messageField && messageCount) {
+    const updateMessageCount = () => {
+      messageCount.textContent = `${messageField.value.length} / ${messageField.maxLength} characters`;
+    };
+
+    messageField.addEventListener('input', updateMessageCount);
+    enquiryForm.addEventListener('reset', () => requestAnimationFrame(updateMessageCount));
+  }
+
+  
+  
   enquiryForm.addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(enquiryForm);
