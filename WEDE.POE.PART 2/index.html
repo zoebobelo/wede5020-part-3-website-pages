@@ -17,14 +17,15 @@
         height="100"
         />
     <h1 id="Title" >LEXHAPHOTOGRAPHY</h1>
-    
-    
     </header>
 
+    <button id="menuBtn" type="button" aria-controls="mainNav" aria-expanded="false">
+        <span aria-hidden="true">☰</span> Menu
+    </button>
 
-    <nav>
+    <nav id="mainNav" aria-label="Main navigation">
          <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
             <li><a href="02-about-us-page.html">About us</a></li>
             <li><a href="03-image-gallery.html">Image Gallery</a></li>
             <li><a href="05-enquiry-page.html">Enquiry</a></li>
@@ -32,12 +33,13 @@
         </ul>
      </nav>
      
-     
     <hr id="HeaderLine">
     
     </div>
     <!--<p>Welcome to Lexhaphotography!</p>-->
-<section class="hero">
+
+<main>
+<section class="hero fade-in">
     <h1 id="Welcome">Welcome to Lexhaphotography</h1>
     <p>Lexhaphotography is a creative photography business based in Queenstown, 
         Eastern Cape, proudly owned and led by Liliso Ntloko.We specialize in 
@@ -46,14 +48,13 @@
          Shoots, Portraits, and Family Shoots.At Lexhaphotography, every picture 
          tells a story. Our mission is to provide high-quality, affordable
           photography that celebrates beauty, confidence, and authentic moments.
-          [Book Your Session Today]</p>
+    </p>
+    <a class="cta-link" href="05-enquiry-page.html">Book Your Session Today</a>
 
           </section>
-    
+          </main>
     <!--short summary of business operations-->
    
-
-
 <div class="bottom-section">
     <hr id="footerLine">
     <footer class="footer">
@@ -61,11 +62,9 @@
         &copy; Lexhaphotography ,All rights reserved
     </p>
     <a href="mailto:st10530562@myemeris.edu.za">Email me at st10530562@myemeris.edu.za</a>
-
-
  </footer>
  </div>
 
- <script src="js/script.js"></script>
+ <script src="images/Script.js" defer></script>
 </body>
 </html>

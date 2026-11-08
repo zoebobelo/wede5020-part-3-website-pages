@@ -44,13 +44,25 @@ img {
   letter-spacing: 3px;
 }
 
+#menuBtn {
+  display: none;
+  background: #c9a86a;
+  color: #0a0a14;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px 20px;
+  font-family: inherit;
+}
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   list-style: none;
   padding: 15px 40px;
-  background: #111122;
+  background: #111111;
 }
 
 nav a {
@@ -72,7 +84,7 @@ nav a.active {
 }
 
 #Welcome {
-  color: #d4af37;
+  color: #f1f0ec;
   font-size: clamp(2rem, 5vw, 2.5rem);
 }
 
@@ -91,27 +103,61 @@ nav a.active {
   text-align: center;
 }
 
+html.js .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+html.js .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .fade-in {
+    transition: none;
+    transform: none;
+  }
+}
+
 .hero p {
   max-width: 800px;
   line-height: 1.6;
 }
 
-body > h1,
-body > h2,
-body > p,
-body > article,
-body > .owner-profile,
-body > .three-columns,
-body > .gallery-categories {
+.cta-link {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #c9a86a;
+  border-radius: 4px;
+  background: #c9a86a;
+  color: #0a0a14;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.cta-link:hover,
+.cta-link:focus-visible {
+  background: transparent;
+  color: #fff;
+}
+
+main > h1,
+main > h2,
+main > p,
+main > article,
+main > .owner-profile,
+main > .three-columns,
+main > .gallery-categories {
   margin-right: auto;
   margin-left: auto;
   max-width: 1200px;
 }
 
-body > h1,
-body > h2,
-body > p,
-body > article {
+main > h1,
+main > h2,
+main > p,
+main > article {
   margin-top: 20px;
   margin-bottom: 15px;
   padding-right: 20px;
@@ -234,6 +280,14 @@ body > article {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+.contact-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
 .enquiry-container h1 {
   margin-bottom: 12px;
   text-align: center;
@@ -310,6 +364,18 @@ footer p {
   .header {
     justify-content: center;
     text-align: center;
+  }
+
+  html.js #menuBtn {
+    display: block;
+  }
+
+  html.js #mainNav {
+    display: none;
+  }
+
+  html.js #mainNav.show {
+    display: block;
   }
 
   nav ul {

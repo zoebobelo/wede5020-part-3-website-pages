@@ -19,12 +19,16 @@
             <h1 id="Title">LEXHAPHOTOGRAPHY</h1>
         </header>
 
-        <nav>
+        <button id="menuBtn" type="button" aria-controls="mainNav" aria-expanded="false">
+            <span aria-hidden="true">☰</span> Menu
+        </button>
+
+        <nav id="mainNav" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="02-about-us-page.html">About us</a></li>
                 <li><a href="03-image-gallery.html">Image Gallery</a></li>
-                <li><a href="05-enquiry-page.html" class="active">Enquiry</a></li>
+                <li><a href="05-enquiry-page.html" class="active" aria-current="page">Enquiry</a></li>
                 <li><a href="04-Contact-page.html">Contact us</a></li>
             </ul>
         </nav>
@@ -35,8 +39,7 @@
         <h1>Enquiries</h1>
         <p class="subtitle">Please fill out the form below to get in touch with us.</p>
 
-        <!-- YOU MISSED THIS FORM TAG - THIS IS WHY SUBMIT DOESN'T WORK -->
-        <form action="#" method="POST">
+        <form action="mailto:Lexhaphotography@gmail.com" method="post" enctype="text/plain">
             <table>
                 <tr>
                     <td><label for="title">Title:</label></td>
@@ -59,8 +62,8 @@
                     <td><input type="tel" id="phonenumber" name="phonenumber" pattern="[0-9]{10}" placeholder="e.g 0723142309"></td>
                 </tr>
                 <tr>
-                    <td><label for="typeOfShoot">Message:</label></td>
-                    <td><textarea id="typeOfShoot" name="typeOfShoot" rows="4" cols="50" required></textarea></td>
+                    <td><label for="message">Message:</label></td>
+                    <td><textarea id="message" name="message" rows="4" required></textarea></td>
                 </tr>
                 <tr>
                     <td><label for="preferredDate">Preferred Date of Shoot:</label></td>
@@ -89,6 +92,6 @@
         </footer>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="images/Script.js" defer></script>
 </body>
 </html>

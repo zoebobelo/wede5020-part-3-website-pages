@@ -23,13 +23,17 @@
     </header>
     
 
-    <nav>
+    <button id="menuBtn" type="button" aria-controls="mainNav" aria-expanded="false">
+        <span aria-hidden="true">☰</span> Menu
+    </button>
+
+    <nav id="mainNav" aria-label="Main navigation">
          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="02-about-us-page.html">About us</a></li>
             <li><a href="03-image-gallery.html">Image Gallery</a></li>
             <li><a href="05-enquiry-page.html">Enquiry</a></li>
-            <li><a href="04-Contact-page.html">Contact us</a></li>
+            <li><a href="04-Contact-page.html" class="active" aria-current="page">Contact us</a></li>
         </ul>
      </nav>
      
@@ -39,18 +43,19 @@
     </div>
     
     <!--Contact Information-->
-    <h1>Contact Us</h1>
-    <h2>We would love to hear from you!</h2>
-    <p><strong>Business:</strong> Lexhaphotography</p>
-    <p><strong>Owner:</strong> Liliso Ntloko</p>
-    <p><strong>Location:</strong> Queenstown (Komani), Eastern Cape, South Africa</p>
-    <p><strong>View Pin:</strong> <a href="https://www.google.com/maps/place/Queenstown,+Eastern+Cape/@-32.086667,27.833333,12z/data=!3m1!4b1!4m5!3m4!1s0x1d81c9d5f7c9d5f7:0x1d81c9d5f7c9d5f7!8m2!3d-32.086667!4d27.833333" target="_blank">View on Map</a></p>
-    <p><strong>Phone / WhatsApp:</strong> 072 390 8908</p>
-    <p><strong>Email:</strong> <a href="mailto:Lexhaphotography@gmail.com">Lexhaphotography@gmail.com</a></p>
-    <p><strong>Owners Instagram:</strong> <a href="https://www.instagram.com/its_l.ily/#" target="_blank">@lexhaphotography</a></p>
-    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/lexhaphotography/" target="_blank">@lexhaphotography</a></p>
-    <p><strong>Operating Hours:</strong> Monday - Saturday: 09:00 - 17:00 | Sunday: Closed (by appointment only)</p>
-    
+    <main class="contact-container">
+        <h1>Contact Us</h1>
+        <h2>We would love to hear from you!</h2>
+        <p><strong>Business:</strong> Lexhaphotography</p>
+        <p><strong>Owner:</strong> Liliso Ntloko</p>
+        <p><strong>Location:</strong> Queenstown (Komani), Eastern Cape, South Africa</p>
+        <p><strong>View Pin:</strong> <a href="https://www.google.com/maps/place/Queenstown,+Eastern+Cape/@-32.086667,27.833333,12z/data=!3m1!4b1!4m5!3m4!1s0x1d81c9d5f7c9d5f7:0x1d81c9d5f7c9d5f7!8m2!3d-32.086667!4d27.833333" target="_blank">View on Map</a></p>
+        <p><strong>Phone / WhatsApp:</strong> 072 390 8908</p>
+        <p><strong>Email:</strong> <a href="mailto:Lexhaphotography@gmail.com">Lexhaphotography@gmail.com</a></p>
+        <p><strong>Owners Instagram:</strong> <a href="https://www.instagram.com/its_l.ily/#" target="_blank">@lexhaphotography</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/lexhaphotography/" target="_blank">@lexhaphotography</a></p>
+        <p><strong>Operating Hours:</strong> Monday - Saturday: 09:00 - 17:00 | Sunday: Closed (by appointment only)</p>
+    </main>
 
     <div class="bottom-section">
     <hr id="footerLine">
@@ -64,6 +69,6 @@
  </footer>
  </div>
 
- <script src="js/script.js"></script>
+ <script src="images/Script.js" defer></script>
 </body>
 </html>

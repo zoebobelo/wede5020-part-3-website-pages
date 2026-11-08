@@ -23,10 +23,14 @@
     </header>
     
 
-    <nav>
+    <button id="menuBtn" type="button" aria-controls="mainNav" aria-expanded="false">
+        <span aria-hidden="true">☰</span> Menu
+    </button>
+
+    <nav id="mainNav" aria-label="Main navigation">
          <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="02-about-us-page.html">About us</a></li>
+            <li><a href="02-about-us-page.html" class="active" aria-current="page">About us</a></li>
             <li><a href="03-image-gallery.html">Image Gallery</a></li>
             <li><a href="05-enquiry-page.html">Enquiry</a></li>
             <li><a href="04-Contact-page.html">Contact us</a></li>
@@ -39,6 +43,7 @@
     </div> 
 
 
+    <main>
     <h1>About Us</h1>
 
 
@@ -106,6 +111,7 @@
         <p>To grow into one of the most recognized and trusted photography brands in the Eastern Cape, empowering young creatives. Based in Queenstown, Available Ac... Lexhaphotography - Where Every Picture Tells Your Story.</p>
     </div>
 </div>
+</main>
 <div class="bottom-section">
 <hr id="footerLine">
     <footer>
@@ -118,6 +124,6 @@
  </footer>
  </div>
      
-<script src="js/script.js"></script>    
+<script src="images/Script.js" defer></script>
 </body>
 </html>
