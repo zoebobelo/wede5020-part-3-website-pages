@@ -52,42 +52,127 @@ if ('IntersectionObserver' in window) {
 }
 
 
-// Enquiry form submission handling
-const enquiryForm = document.querySelector('.enquiry-container form');
+const enquiryForm = document.querySelector('.enquiry-form');
 if (enquiryForm) {
   const preferredDate = enquiryForm.querySelector('#preferredDate');
   if (preferredDate) {
     const today = new Date();
-    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+    preferredDate.min = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
       .toISOString()
       .slice(0, 10);
-    preferredDate.min = localToday;
   }
 
-  const messageField = enquiryForm.querySelector('#message');
-  const messageCount = enquiryForm.querySelector('#message-count');
-  if (messageField && messageCount) {
-    const updateMessageCount = () => {
-      messageCount.textContent = `${messageField.value.length} / ${messageField.maxLength} characters`;
-    };
+  const serviceType = enquiryForm.querySelector('#serviceType');
+  const response = enquiryForm.querySelector('#enquiry-response');
+  const updateEnquiryResponse = () => {
+    const service = serviceType.value;
+    const date = preferredDate.value;
+    response.textContent = service
+      ? `Thanks for your interest in ${service.toLowerCase()}${date ? ` on ${date}` : ''}. We will confirm availability for your requested date and location and provide a quote by email.`
+      : 'We will confirm your selected service’s availability and provide a quote by email.';
+  };
+  serviceType.addEventListener('change', updateEnquiryResponse);
+  preferredDate.addEventListener('change', updateEnquiryResponse);
+}
 
+document.querySelectorAll('.site-form').forEach(form => {
+  const messageField = form.querySelector('textarea[maxlength]');
+  const messageCount = form.querySelector('#message-count');
+  const status = form.querySelector('.form-status');
+  const updateMessageCount = () => {
+    if (messageField && messageCount) {
+      messageCount.textContent = `${messageField.value.length} / ${messageField.maxLength} characters (minimum ${messageField.minLength})`;
+    }
+  };
+
+  if (messageField) {
     messageField.addEventListener('input', updateMessageCount);
-    enquiryForm.addEventListener('reset', () => requestAnimationFrame(updateMessageCount));
   }
 
-  
-  
-  enquiryForm.addEventListener('submit', event => {
+  form.addEventListener('reset', () => {
+    requestAnimationFrame(() => {
+      updateMessageCount();
+      if (status) {
+        status.textContent = '';
+      }
+      if (form.classList.contains('enquiry-form')) {
+        const response = form.querySelector('#enquiry-response');
+        response.textContent = 'We will confirm your selected service’s availability and provide a quote by email.';
+      }
+    });
+  });
+
+  form.addEventListener('submit', event => {
     event.preventDefault();
-    const formData = new FormData(enquiryForm);
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    const formData = new FormData(form);
     const details = Array.from(formData.entries())
       .map(([label, value]) => `${label}: ${value}`)
       .join('\n');
-    const subject = encodeURIComponent('Photography enquiry');
-    const body = encodeURIComponent(details);
+    const isEnquiry = form.classList.contains('enquiry-form');
+    const service = formData.get('Photography service');
+    const subject = isEnquiry
+      ? `Photography enquiry${service ? ` - ${service}` : ''}`
+      : `Website message - ${formData.get('Message type')}`;
+    const recipient = form.getAttribute('action');
+    const mailto = `${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(details)}`;
 
-    window.location.href = `mailto:Lexhaphotography@gmail.com?subject=${subject}&body=${body}`;
+    if (status) {
+      status.textContent = 'Your email app should open with your details ready to send. Please review and send the email to complete your message.';
+    }
+    if (isEnquiry) {
+      const response = form.querySelector('#enquiry-response');
+      response.textContent = `Your ${service.toLowerCase()} enquiry for ${formData.get('Preferred shoot date')} in ${formData.get('Preferred location')} is ready. We will confirm availability and provide a quote after receiving your email.`;
+    }
+    window.location.href = mailto;
   });
+});
+
+const gallerySearch = document.getElementById('gallerySearch');
+const gallerySort = document.getElementById('gallerySort');
+const galleryResults = document.getElementById('galleryResults');
+if (gallerySearch && gallerySort && galleryResults) {
+  const categories = Array.from(document.querySelectorAll('.gallery-category'));
+  const totalFigures = Array.from(document.querySelectorAll('.gallery-photos figure')).length;
+  const originalFigures = new Map(
+    categories.map(category => [category, Array.from(category.querySelectorAll('figure'))])
+  );
+
+  const updateGallery = () => {
+    const query = gallerySearch.value.trim().toLocaleLowerCase();
+    let visibleCount = 0;
+
+    categories.forEach(category => {
+      const heading = category.querySelector('h2').textContent.toLocaleLowerCase();
+      const figures = originalFigures.get(category);
+      const sortedFigures = gallerySort.value === 'az'
+        ? [...figures].sort((first, second) =>
+          first.querySelector('img').alt.localeCompare(second.querySelector('img').alt)
+        )
+        : figures;
+
+      sortedFigures.forEach(figure => {
+        const image = figure.querySelector('img');
+        const caption = figure.querySelector('figcaption')?.textContent || '';
+        const matches = !query || `${heading} ${image.alt} ${caption}`.toLocaleLowerCase().includes(query);
+        figure.hidden = !matches;
+        visibleCount += Number(matches);
+        category.querySelector('.gallery-photos').append(figure);
+      });
+
+      category.hidden = !sortedFigures.some(figure => !figure.hidden);
+    });
+
+    galleryResults.textContent = visibleCount
+      ? `Showing ${visibleCount} of ${totalFigures} portfolio images.`
+      : 'No portfolio images match your search.';
+  };
+
+  gallerySearch.addEventListener('input', updateGallery);
+  gallerySort.addEventListener('change', updateGallery);
 }
 
 const galleryImages = Array.from(document.querySelectorAll('.gallery-photos img'));

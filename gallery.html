@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <meta name="description" content="View Matric Dance, nature, and model portfolio photography by Lexhaphotography in Komani (Queenstown) and the Eastern Cape.">
+    <meta name="keywords" content="Komani photography portfolio, Matric Dance photos Queenstown, Eastern Cape model photography, nature photography Komani">
+    <meta name="theme-color" content="#111111">
+    <link rel="canonical" href="https://emgpsd.github.io/wede5020-2026-part-3-zoebobelo/gallery.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Photography Portfolio | Lexhaphotography">
+    <meta property="og:description" content="Browse Matric Dance, nature, and model portfolio images by Komani photographer Liliso Ntloko.">
+    <meta property="og:url" content="https://emgpsd.github.io/wede5020-2026-part-3-zoebobelo/gallery.html">
+    <title>Photography Portfolio | Lexhaphotography Komani</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,7 +24,7 @@
         width="100"
         height="100"
         />
-    <h1 id="Title" >LEXHAPHOTOGRAPHY</h1>
+    <p id="Title">LEXHAPHOTOGRAPHY</p>
     
     
     </header>
@@ -29,10 +37,10 @@
     <nav id="mainNav" aria-label="Main navigation">
          <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="02-about-us-page.html">About us</a></li>
-            <li><a href="03-image-gallery.html" class="active" aria-current="page">Image Gallery</a></li>
-            <li><a href="05-enquiry-page.html">Enquiry</a></li>
-            <li><a href="04-Contact-page.html">Contact us</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="gallery.html" class="active" aria-current="page">Image Gallery</a></li>
+            <li><a href="enquiry.html">Enquiry</a></li>
+            <li><a href="contact.html">Contact us</a></li>
         </ul>
      </nav>
      
@@ -42,8 +50,18 @@
     </div>
     <main>
     <h1 id="Gallery">Gallery</h1>
-    <p>Explore our portfolio. Every image is shot by Liliso Ntloko in and around Queenstown.
+    <p>Explore Matric Dance, nature, and model photography by Liliso Ntloko in and around Komani (Queenstown), Eastern Cape.
 </p>
+    <section class="gallery-controls" aria-label="Search and sort portfolio">
+        <label for="gallerySearch">Search portfolio</label>
+        <input id="gallerySearch" type="search" placeholder="Try nature, matric, or model" autocomplete="off">
+        <label for="gallerySort">Sort images</label>
+        <select id="gallerySort">
+            <option value="featured">Featured order</option>
+            <option value="az">Description (A–Z)</option>
+        </select>
+        <p id="galleryResults" aria-live="polite">Showing all portfolio images.</p>
+    </section>
      <!--Image Gallery-->
      
     <div class="gallery-categories fade-in">
@@ -51,30 +69,30 @@
   <section class="gallery-category">
     <h2>Nature photos</h2>
     <div class="gallery-photos">
-      <figure><img src="images/WhatsApp Image 2026-08-17 at 19.52.45 (1).jpeg" alt="Nature photograph"></figure>
-      <figure><img src="images/WhatsApp Image 2026-08-17 at 19.52.44.jpeg" alt="Nature photograph"></figure>
-      <figure><img src="images/WhatsApp Image 2026-08-17 at 19.52.45.jpeg" alt="Nature photograph"></figure>
-      <figure><img src="images/WhatsApp Image 2026-08-17 at 19.52.44 (1).jpeg" alt="Nature photograph"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/nature-queenstown-01.jpeg" alt="Nature photography captured by Lexhaphotography in the Eastern Cape"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/nature-queenstown-02.jpeg" alt="Eastern Cape nature photograph by Lexhaphotography"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/nature-queenstown-03.jpeg" alt="Nature scene photographed by Liliso Ntloko"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/nature-queenstown-04.jpeg" alt="Komani nature photography portfolio image"></figure>
     </div>
   </section>
 <!-- Add more sections for other categories of images as needed -->
   <section class="gallery-category">
     <h2>Matric Dance Photos</h2>
     <div class="gallery-photos">
-      <figure><img src="images/MD1.jpeg" alt="Matric dance portrait"></figure>
-      <figure><img src="images/MD2.jpeg" alt="Matric dance portrait"></figure>
-      <figure><img src="images/MD3.jpeg" alt="Matric dance portrait"></figure>
-      <figure><img src="images/MD4.jpeg" alt="Matric dance portrait"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/matric-dance-01.jpeg" alt="Matric Dance portrait photography in Komani"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/matric-dance-02.jpeg" alt="Matric Dance photography by Lexhaphotography"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/matric-dance-03.jpeg" alt="Eastern Cape Matric Dance portrait"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/matric-dance-04.jpeg" alt="Matric Dance photo shoot portfolio image"></figure>
     </div>
   </section>
 
   <section class="gallery-category">
     <h2>Model shoots</h2>
     <div class="gallery-photos">
-      <figure><img src="images/model pics.jpeg" alt="Model portfolio portrait"></figure>
-      <figure><img src="images/model pics 2.jpeg" alt="Model portfolio portrait"></figure>
-      <figure><img src="images/model pics 3.jpeg" alt="Model portfolio portrait"></figure>
-      <figure><img src="images/model pics 4.jpeg" alt="Model portfolio portrait"><figcaption>Photo by Lexhaphotography</figcaption></figure>
+      <figure><img loading="lazy" decoding="async" src="images/model-portfolio-01.jpeg" alt="Model portfolio photography by Liliso Ntloko in Komani"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/model-portfolio-02.jpeg" alt="Model portrait for a photography portfolio"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/model-portfolio-03.jpeg" alt="Model photo shoot by Lexhaphotography"></figure>
+      <figure><img loading="lazy" decoding="async" src="images/model-portfolio-04.jpeg" alt="Eastern Cape model portfolio portrait"><figcaption>Photo by Lexhaphotography</figcaption></figure>
     </div>
   </section>
 

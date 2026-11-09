@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiries - LEXHAPHOTOGRAPHY</title>
+    <meta name="description" content="Enquire about Matric Dance, model, nature, portrait, and family photography sessions with Lexhaphotography in Komani and the Eastern Cape.">
+    <meta name="keywords" content="photography booking enquiry Komani, Matric Dance photos Eastern Cape, model shoot booking Queenstown">
+    <meta name="theme-color" content="#111111">
+    <link rel="canonical" href="https://emgpsd.github.io/wede5020-2026-part-3-zoebobelo/enquiry.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Book a Photography Session | Lexhaphotography">
+    <meta property="og:description" content="Tell us what kind of photography session you are planning and ask about availability.">
+    <meta property="og:url" content="https://emgpsd.github.io/wede5020-2026-part-3-zoebobelo/enquiry.html">
+    <title>Photography Enquiry | Lexhaphotography Komani</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,7 +24,7 @@
         width="100"
         height="100"
         />
-            <h1 id="Title">LEXHAPHOTOGRAPHY</h1>
+            <p id="Title">LEXHAPHOTOGRAPHY</p>
         </header>
 
         <button id="menuBtn" type="button" aria-controls="mainNav" aria-expanded="false">
@@ -26,10 +34,10 @@
         <nav id="mainNav" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="02-about-us-page.html">About us</a></li>
-                <li><a href="03-image-gallery.html">Image Gallery</a></li>
-                <li><a href="05-enquiry-page.html" class="active" aria-current="page">Enquiry</a></li>
-                <li><a href="04-Contact-page.html">Contact us</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="gallery.html">Image Gallery</a></li>
+                <li><a href="enquiry.html" class="active" aria-current="page">Enquiry</a></li>
+                <li><a href="contact.html">Contact us</a></li>
             </ul>
         </nav>
         <hr id="HeaderLine">
@@ -49,47 +57,68 @@
         <section class="enquiry-container">
             <p class="enquiry-eyebrow">LET'S PLAN YOUR SHOOT</p>
             <h1>Make an Enquiry</h1>
-            <p class="subtitle">Tell us a little about what you have in mind and we’ll be in touch.</p>
+            <p class="subtitle">Tell us a little about what you have in mind. We’ll confirm availability and provide a quote based on your session details.</p>
 
-            <form action="mailto:Lexhaphotography@gmail.com" method="post" enctype="text/plain">
+            <form class="site-form enquiry-form" action="mailto:Lexhaphotography@gmail.com" method="post" enctype="text/plain">
             <div class="enquiry-form-grid">
                 <div class="enquiry-field">
                     <label for="title">Title</label>
-                    <input type="text" id="title" name="title" autocomplete="honorific-prefix" required>
+                    <select id="title" name="Title" autocomplete="honorific-prefix" required>
+                        <option value="">Choose a title</option>
+                        <option>Ms</option>
+                        <option>Mr</option>
+                        <option>Mx</option>
+                        <option>Dr</option>
+                        <option>Prefer not to say</option>
+                    </select>
                 </div>
                 <div class="enquiry-field">
                     <label for="firstname">First name</label>
-                    <input type="text" id="firstname" name="firstname" autocomplete="given-name" required>
+                    <input type="text" id="firstname" name="First name" autocomplete="given-name" minlength="2" maxlength="60" required>
                 </div>
                 <div class="enquiry-field">
                     <label for="surname">Surname</label>
-                    <input type="text" id="surname" name="surname" autocomplete="family-name" required>
+                    <input type="text" id="surname" name="Surname" autocomplete="family-name" minlength="2" maxlength="60" required>
                 </div>
                 <div class="enquiry-field">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <input type="email" id="email" name="Email" autocomplete="email" maxlength="254" required>
                 </div>
                 <div class="enquiry-field">
                     <label for="phonenumber">Phone number</label>
-                    <input type="tel" id="phonenumber" name="phonenumber" autocomplete="tel" pattern="[0-9]{10}" placeholder="e.g. 0723142309" aria-describedby="phone-help">
-                    <small id="phone-help">Enter 10 digits, with no spaces.</small>
+                    <input type="tel" id="phonenumber" name="Phone" autocomplete="tel" pattern="(?:\+27|0)[0-9]{9}" placeholder="0723142309 or +27723142309" aria-describedby="phone-help" required>
+                    <small id="phone-help">Enter a South African number starting with 0 or +27.</small>
+                </div>
+                <div class="enquiry-field">
+                    <label for="serviceType">What would you like to enquire about?</label>
+                    <select id="serviceType" name="Photography service" required>
+                        <option value="">Choose a service</option>
+                        <option>Matric Dance photography</option>
+                        <option>Nature photography</option>
+                        <option>Model portfolio shoot</option>
+                        <option>Portrait photography</option>
+                        <option>Family photography</option>
+                        <option>Volunteer or sponsorship</option>
+                        <option>Other</option>
+                    </select>
                 </div>
                 <div class="enquiry-field">
                     <label for="preferredDate">Preferred shoot date</label>
-                    <input type="date" id="preferredDate" name="preferredDate">
+                    <input type="date" id="preferredDate" name="Preferred shoot date" required>
                 </div>
                 <div class="enquiry-field enquiry-field-full">
                     <label for="preferredLocation">Preferred location</label>
-                    <input type="text" id="preferredLocation" name="preferredLocation" placeholder="Where would you like your shoot?">
+                    <input type="text" id="preferredLocation" name="Preferred location" minlength="2" maxlength="120" placeholder="Komani, Eastern Cape, Sandton, or another location" required>
                 </div>
                 <div class="enquiry-field enquiry-field-full">
                     <label for="message">Tell us about your enquiry</label>
-                    <textarea id="message" name="message" rows="5" maxlength="1000" aria-describedby="message-count" required></textarea>
-                    <small id="message-count" aria-live="polite">0 / 1000 characters</small>
+                    <textarea id="message" name="Enquiry details" rows="5" minlength="10" maxlength="1000" aria-describedby="message-count" required></textarea>
+                    <small id="message-count" aria-live="polite">0 / 1000 characters (minimum 10)</small>
                 </div>
             </div>
+            <p id="enquiry-response" class="form-status" role="status" aria-live="polite">We will confirm your selected service's availability and provide a quote by email.</p>
             <div class="buttons">
-                <button type="submit">Send Enquiry</button>
+                <button type="submit">Prepare Enquiry Email</button>
                 <button type="reset">Clear Form</button>
             </div>
             </form>
