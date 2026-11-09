@@ -30,7 +30,12 @@ LEXHAPHOTOGRAPHY is a real, operating small business owned by Liliso Ntloko, bas
 **Consistent Elements:** Gold Lexhaphotography logo and header, navigation across all five pages, and a footer with the business email.
 
 ## Sitemap
-The site has five pages: Home (`index.html`), About (`about.html`), Gallery (`gallery.html`), Enquiry (`enquiry.html`), and Contact (`contact.html`). The XML sitemap is in `sitemap.xml`.
+
+- `index.html` — Home 
+- `about.html` — About Us
+- `gallery.html` — Image Gallery
+- `enquiry.html` — Enquiry
+- `contact.html` — Contact Us
 
 ## Content Sourcing
 - No existing website - N/A
@@ -41,25 +46,21 @@ The site has five pages: Home (`index.html`), About (`about.html`), Gallery (`ga
 - 2026-09-01: Built 5 pages as per screenshots, pushed to https://github.com/EMGPSD/wede5020-2026-wede5020-part-1-zoebobelo
 
 -2026-11-05: Renamed o1-home.html to index.html 
+
 -2026-11-06: Merged css style sheets
-- 2026-11-09: Improved Part 2 feedback and Part 3 functionality: added page-specific SEO titles, descriptions, canonical and social-sharing metadata; descriptive portfolio image file names and alt text; and local Komani photography search terms, consistent headings, and internal page links.
+
+- 2026-11-09: Improved Part 2 feedback and Part 3 functionality
+
 - 2026-11-09: Added accessible portfolio search and A–Z sorting, dynamic result counts, gallery image lazy loading, and kept the keyboard-operable lightbox and responsive navigation. Added a mobile-friendly embedded Komani map.
+
 - 2026-11-09: Added a distinct general-contact form and photography enquiry form with required fields, email/phone/date/length validation, accessible status messages, character counts, service selection, and recipient-addressed email composition. Enquiry guidance tells clients availability and pricing are confirmed individually; no unverified prices or availability are promised.
-- 2026-11-09: Added `robots.txt`, `sitemap.xml`, and a GitHub Pages Actions deployment workflow. Documented GitHub Pages setup and the limits of static form delivery and off-page SEO below.
-- 2026-11-09: Renamed the secondary pages to clean `about.html`, `gallery.html`, `enquiry.html`, and `contact.html` URLs and updated navigation, canonical/social URLs, sitemap entries, and deployment file lists. Resized the header logo from 1328×1184 to 300×268 and optimized the largest nature image from 2048×1365 to 1600×1066. Kept the homepage to its original introduction and booking link while retaining its SEO metadata.
-- 2026-11-09: Removed the optional JSON-LD business structured-data block from the homepage head; retained the existing page title and SEO metadata.
+- 2026-11-09: Added `robots.txt`, `sitemap.xml`
+
+- 2026-11-09: Renamed the secondary pages to clean `about.html`, `gallery.html`, `enquiry.html`, and `contact.html` URLs and updated navigation, canonical/social URLs, sitemap entries, and deployment file lists. Resized the header logo from 1328×1184 to 300×268 and optimized the largest nature image from 2048×1365 to 1600×1066. 
+
 - 2026-11-09: Simplified the README sitemap to a list of the five pages and removed optional frequency and priority fields from `sitemap.xml`.
 
-## Run and deploy
 
-Open `index.html` in a browser to preview the site locally, or use a static local web server to test all pages and navigation.
-
-To publish for free with GitHub Pages:
-1. Push the `main` branch to this repository.
-2. In GitHub, open **Settings → Pages** and set the build and deployment source to **GitHub Actions**.
-3. The included `.github/workflows/pages.yml` workflow deploys the root website on each push to `main`. Follow the workflow run and the repository's Pages settings for the published URL.
-
-The canonical links and sitemap are configured for `https://emgpsd.github.io/wede5020-2026-part-3-zoebobelo/`. Confirm that GitHub Pages has published successfully before submitting or promoting that URL.
 
 ## Forms and deployment limitations
 
@@ -82,3 +83,17 @@ Supriya Shashivasan. (2021, March 23). How to build a Curved UI header. DEV Comm
 
 
 Warncke, S. (2020). Erik Forster Photography - For all your photographic needs. Available at: https://peach.co.za/  [Accessed 20 August 2026].
+
+Cruz Palacios, E. (2026). CSS architecture. Available at: https://dev.to/ [Accessed 3 November 2026].
+
+Mozilla Developer Network. (2026). CSS layout - Learn web development. Available at: https://developer.mozilla.org/ [Accessed 4 November 2026].
+
+Mozilla Developer Network. (2026). KeyboardEvent: key property - Web APIs. Available at: https://developer.mozilla.org/ [Accessed 7 November 2026].
+
+Mozilla Developer Network. (2026). MDN Web Docs. Available at: https://developer.mozilla.org/ [Accessed 6 November 2026].
+
+World Wide Web Consortium. (2020). CSS Grid Layout Module Level 1. Available at: https://www.w3.org/ [Accessed 5 November 2026].
+
+World Wide Web Consortium. (2026). Media Queries Level 5. Available at: https://www.w3.org/ [Accessed 5 November 2026].
+
+World Wide Web Consortium. (2026). W3C standards. Available at: https://www.w3.org/ [Accessed 8 November 2026].

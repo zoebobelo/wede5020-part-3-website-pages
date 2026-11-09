@@ -7,7 +7,7 @@
 html {
   font-family: "Times New Roman", Times, serif;
   color: #222;
-  background: #f5e8e8;
+  background: #a0a0a052;
 }
 
 body {
@@ -277,10 +277,10 @@ main > article {
   min-width: 0;
   min-height: 42px;
   padding: 8px 10px;
-  border: 1px solid #777;
+  border: 1px solid #d4af37;
   border-radius: 4px;
-  background: #fff;
-  color: #222;
+  background: #111;
+  color: #fff;
   font: inherit;
 }
 
